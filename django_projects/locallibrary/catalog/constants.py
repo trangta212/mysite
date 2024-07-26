@@ -4,3 +4,6 @@ LOAN_STATUS = (
   ('a', 'Available'),
   ('r', 'Reserved'),
 )
+PAGINATE_BY = 10
+LOAN_STATUS_AVAILABLE = 'a'
+
