@@ -8,6 +8,9 @@ def index(request):
   num_instances = BookInstance.objects.all().count()
   num_instances_available = BookInstance.objects.filter(status__exact='a').count()
   num_authors = Author.objects.count()
+    # Number of visits to this view, as counted in the session variable.
+  num_visits = request.session.get('num_visits', 1)
+  request.session['num_visits'] = num_visits + 1
   context = {
     'num_books': num_books,
     'num_instances': num_instances,
