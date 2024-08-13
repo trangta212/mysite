@@ -1,1 +1,1 @@
-# mysite
+# learn django
